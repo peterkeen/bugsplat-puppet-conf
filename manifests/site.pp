@@ -2,10 +2,11 @@ Package {
   provider => aptitude
 }
 
-cron { puppet-update:
-  command => "cd /etc/puppet && git pull origin master && puppet -v /etc/puppet/manifests/site.pp",
-  user => 'root'
+node default {
+  cron { puppet_update:
+    command => "cd /etc/puppet && git pull origin master && puppet -v /etc/puppet/manifests/site.pp",
+    user => 'root'
+  }
+
+  include s_bugsplat_www
 }
-
-  
-
