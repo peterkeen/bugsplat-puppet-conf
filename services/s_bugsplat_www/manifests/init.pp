@@ -10,5 +10,6 @@ class s_bugsplat_www {
   apache::vhost { "bugsplat.info":
     port => 80,
     docroot => '/var/www/bugsplat.info',
+    priority => 10
   }
 }
