@@ -10,7 +10,7 @@ class s_bugsplat_www {
   apache::vhost { "bugsplat.info":
     port => 80,
     docroot => '/var/www/bugsplat.info',
-    template => 'vhost-default.conf.erb',
+    template => 's_bugsplat_www/vhost-default.conf.erb',
     priority => 10
   }
 }
