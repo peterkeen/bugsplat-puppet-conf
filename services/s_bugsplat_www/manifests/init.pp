@@ -7,6 +7,10 @@ class s_bugsplat_www {
     owner => 'ubuntu',
   }
 
+  package { "apache2":
+    ensure => installed
+  }
+
   apache::vhost { "bugsplat.info":
     port => 80,
     docroot => '/var/www/bugsplat.info',
