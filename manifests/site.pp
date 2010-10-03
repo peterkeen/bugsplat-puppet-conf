@@ -2,10 +2,9 @@ Package {
   provider => aptitude
 }
 
-package { "apache2":
-  ensure => present
+cron { puppet-update:
+  command => "cd /etc/puppet && git pull origin master && puppet -v /etc/puppet/manifests/site.pp",
 }
 
-package { "postfix":
-  ensure => present
-}
+  
+
