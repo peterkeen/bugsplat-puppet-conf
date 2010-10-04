@@ -14,7 +14,7 @@ class s_bugsplat_www {
     priority => 10
   }
 
-  A2mod { 'rewrite':
-    ensure => present
+  @a2mod { 'rewrite':
+    ensure => present;
   }
 }
