@@ -15,7 +15,7 @@ git clone git://github.com/peterkeen/bugsplat-puppet-conf /etc/puppet
 
 puppet_commad="puppet --modulepath /etc/puppet/modules:/etc/puppet/services --logdest syslog -v /etc/puppet/manifests/site.pp"
 
-$Puppet_command
+$puppet_command
 $puppet_command
 $puppet_command
 $puppet_command
