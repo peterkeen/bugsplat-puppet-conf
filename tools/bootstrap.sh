@@ -9,4 +9,5 @@ $EC2_HOME/bin/ec2-request-spot-instances \
     $BUGSPLAT_AMI \
     -t $INSTANCE_TYPE \
     -f tools/ec2-user-data.sh \
-    -p $MAX_PRICE
+    -p $MAX_PRICE \
+    -r persistent

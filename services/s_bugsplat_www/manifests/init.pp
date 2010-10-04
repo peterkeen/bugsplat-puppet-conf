@@ -13,4 +13,8 @@ class s_bugsplat_www {
     template => 's_bugsplat_www/vhost-default.conf.erb',
     priority => 10
   }
+
+  apache::a2mod { 'rewrite':
+    ensure => present
+  }
 }
