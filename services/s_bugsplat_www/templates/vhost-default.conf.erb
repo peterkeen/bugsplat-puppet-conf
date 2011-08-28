@@ -24,6 +24,6 @@ NameVirtualHost *:<%= port %>
   ServerSignature On
 </VirtualHost>
 <VirtualHost *:<%= port %>>
-  ServerName <%= name %>
+  ServerName www.<%= name %>
   RedirectMatch 301 ^(.*)$ http://<%= name %>$1
 </VirtualHost>
