@@ -23,3 +23,7 @@ NameVirtualHost *:<%= port %>
   CustomLog /var/log/apache2/<%= name %>_access.log combined
   ServerSignature On
 </VirtualHost>
+<VirtualHost *:<%= port %>>
+  ServerName <%= name %>
+  RedirectMatch 301 ^(.*)$ http://<%= name %>$1
+</VirtualHost>
